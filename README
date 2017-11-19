@@ -1,0 +1,26 @@
+URL Shortening Service
+=====================================
+
+This Play application generates shortened URL for a given input URL.
+
+Assumptions:
+------------
+1. Application uses Play framework, Scala and SBT
+2. It uses in-memory database H2, Anorm
+
+Steps to run:
+-------------
+1. run using sbt
+2. in the sbt shell, use clean, clean-files, compile to clean and compile the build
+3. use run to start the application
+4. apply the database script
+
+What does the service do:
+-------------------------
+Long URL is stored in the in-memory database with id being the primary key. THe primary key is then used to generate the shortened URL.
+
+For reverse look-up, the primary key is used to get the complete URL.
+
+
+
+

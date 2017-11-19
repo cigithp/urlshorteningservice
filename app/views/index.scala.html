@@ -1,0 +1,28 @@
+@(shortURL: String, taskForm: Form[String], taskForm2: Form[String])
+
+@import helper._
+
+@main("URL Shortening Service") {
+
+<h1>URL Shortening Service</h1>
+
+@form(routes.Application.generateURL) {
+
+Enter URL : <input type="text" name="longUrl" size="30"> <input type="submit" value="Generate"> <input type="reset" value="Clear">
+
+<br><br>
+
+Short URL Generated: <input type="text" name="shortUrl" value="@shortURL" size="30"> <input type="reset" value="Clear">
+
+}
+
+<br>
+
+@form(routes.Application.browseShortURL) {
+
+Enter Short URL : <input type="text" name="inputShortURL"> <input type="submit" value="Go"> <input type="reset" value="Clear">
+
+}
+
+
+}
